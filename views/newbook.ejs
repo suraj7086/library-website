@@ -1,28 +1,31 @@
 <%- include ("partials/header.ejs") %>
-<form action="/addnewbook" method="POST">
+<form action="/books" method="POST">
     <div class="container">
-        <h4>Fill the details to add a new book</h4>
-        <div>
-            <label>
-                Book Name <input type="text" name="bookname" placeholder="NCERT history">
-            </label>
+        <div class="book-form-container">
+            <h4>Fill the details to add a new book</h4>
+            <div>
+                <label>
+                    Book Name <input type="text" name="bookname" placeholder="NCERT history">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Book Author <input type="text" name="bookauthor" placeholder="Forouzan">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Book Department <input type="text" name="bookdepartment" placeholder="CSE">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Select a file: <input type="file" name="file">
+                </label>
+            </div>
+            <button class="btn btn-success">Submit</button>
         </div>
-        <div>
-            <label>
-                Book Author <input type="text" name="bookauthor" placeholder="Forouzan">
-            </label>
-        </div>
-        <div>
-            <label>
-                Book Author <input type="text" name="bookdepartment" placeholder="CSE">
-            </label>
-        </div>
-        <div>
-            <label>
-                Select a file: <input type="file" name="file">
-            </label>
-        </div>
-        <button class="btn btn-success">Submit</button>
+        
     </div>
 </form>
 <%- include ("partials/footer.ejs") %>

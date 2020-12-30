@@ -6,7 +6,7 @@
             <div style="width:100%;">
                 <h1>Welcome to Engineer's Library</h1>
                 <p>Help other's by uploading a new book.</p>
-                <a href="/addnewbook"><button class="btn btn-success">Add New Book</button></a>
+                <a href="/books/new"><button class="btn btn-success">Add New Book</button></a>
             </div>
             <div style="width:40%;">
                 <img src="/img/book.png" class="icon_img">
@@ -69,7 +69,7 @@
                 <div class="caption">
                     <h6><%= book.book_name %></h6>
                     <p>by:<%= book.book_author %></p>
-                    <button class="btn btn-info">Open</button>
+                     <a href="/books/<%=book._id %>"><button class="btn btn-info">Open</button></a>
                     <button class="btn btn-primary">Download</button>
                 </div>
             </div>

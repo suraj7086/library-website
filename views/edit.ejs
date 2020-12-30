@@ -1,0 +1,30 @@
+<%- include ("partials/header.ejs") %>
+<h1>This is edit page</h1>
+<h2><%= book.book_name %></h2>
+<form action="/books/<%=book._id%>?_method=PUT" method="POST">
+    <div class="container">
+        <h4>Fill the details to add a new book</h4>
+        <div>
+            <label>
+                Book Name <input type="text" name="bookname" value="<%= book.book_name %>" placeholder="NCERT history">
+            </label>
+        </div>
+        <div>
+            <label>
+                Book Author <input type="text" name="bookauthor" value="<%= book.book_author %>" placeholder="Forouzan">
+            </label>
+        </div>
+        <div>
+            <label>
+                Book Author <input type="text" name="bookdepartment" value="<%= book.book_department %>" placeholder="CSE">
+            </label>
+        </div>
+        <div>
+            <label>
+                Select a file: <input type="file" name="file">
+            </label>
+        </div>
+        <button class="btn btn-success">Submit</button>
+    </div>
+</form>
+<%- include ("partials/footer.ejs") %>

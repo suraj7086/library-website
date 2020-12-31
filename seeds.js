@@ -1,75 +1,58 @@
 var mongoose = require("mongoose");
-var book = require("./module/book");
-var comment = require("./module/comments");
 
+var book = require("./models/book.js");
+var Comment = require("./models/comments");
 
 var data = [
-
-   { book_name: "computer networking",
-    book_author: "forouzan",
-    book_department: "computer Science",
-    book_cover: "https://images-na.ssl-images-amazon.com/images/I/71gfvWeTAiL.jpg",
-   },
-   { book_name: "Linux",
-    book_author: "Suraj",
-    book_department: "computer Science",
-    book_cover: "https://images-na.ssl-images-amazon.com/images/I/71gfvWeTAiL.jpg",
-   },
-   { book_name: "Math",
-    book_author: "RD",
-    book_department: "computer Science",
-    book_cover: "https://images-na.ssl-images-amazon.com/images/I/71gfvWeTAiL.jpg",
-   },
-   { book_name: "C++",
-    book_author: "SHIVAM",
-    book_department: "computer Science",
-    book_cover: "https://images-na.ssl-images-amazon.com/images/I/71gfvWeTAiL.jpg",
-   },
-   { book_name: "computer networking",
-    book_author: "forouzan",
-    book_department: "computer Science",
-    book_cover: "https://images-na.ssl-images-amazon.com/images/I/71gfvWeTAiL.jpg",
-   }
-]
+{ bookname:"Highjacking",
+  bookauthor:"Singh",
+  bookdepartment: "Computer Science",
+  bookcover: "https://www.interfacemedia.com/media/2350/img-vr-tilt-brush-website-hero-shot.jpg"
+},
+{ bookname:"Highjacking",
+  bookauthor:"Singh",
+  bookdepartment: "Computer Science",
+  bookcover: "https://www.interfacemedia.com/media/2350/img-vr-tilt-brush-website-hero-shot.jpg"
+},
+{ bookname:"Highjacking",
+  bookauthor:"Singh",
+  bookdepartment: "Computer Science",
+  bookcover: "https://www.interfacemedia.com/media/2350/img-vr-tilt-brush-website-hero-shot.jpg"
+}];
 
 function seedDB(){
-   // remove all books
-    book.remove({},function(err){
-        if(err)
-        {
-            console.log(err);
-    
-        }
+// removing all books
+book.remove({},function(err){
+    if(err){
+        console.log(err);
+    }
+    else{
         console.log("books are removed");
- // adding new books
+        //adding books
         data.forEach(function(seed){
-            book.create(seed,function(err,books){
+            book.create(seed,function(err,onebook){
                 if(err){
                     console.log(err);
                 }
                 else{
-                    console.log("add a book");
-                    //create a comment 
-                    comment.create({
-                        
-                        title : "this book is very good for begineers and they can easily understand the concept of networking.",
-                        author: "suraj"
-                    },function(err,newcomment){
+                    console.log(onebook);
+                    Comment.create({
+                        title:"this is very good book for beginner",
+                        author: "Lankapati Singh"
+                    },function(err,comment){
                         if(err){
                             console.log(err);
                         }
                         else{
-                             books.comments.push(newcomment);
-                             books.save();
-                            console.log("book added with comment");
+                            onebook.comments.push(comment);
+                            onebook.save();
+                            console.log("comment add");
                         }
                     });
                 }
-            })
+            });
         });
-    });
-   
+    }
+});
 }
-    
-
-module.exports = seedDB; 
+module.exports = seedDB;

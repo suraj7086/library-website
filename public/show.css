@@ -1,0 +1,16 @@
+.insidebook{
+   width:100%;
+   display:flex;
+   box-shadow: 0 5px 10px 0 #4b4949;
+}
+.bookdetails{
+    width:50%;
+}
+.bookcomments{
+    background:rgb(22, 155, 160);
+    width:50%;
+}
+.edit{
+    margin-top: 2vw;
+    display: flex;
+}

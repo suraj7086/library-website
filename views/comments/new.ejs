@@ -1,0 +1,17 @@
+<%- include ("../partials/header.ejs") %>
+<form action="/books/<%=book._id%>/comments" method="POST">
+        <div class="book-form-container">
+                <a class="btn btn-danger" href="/books">Go Back</a>
+            <div class="book-form-wrap">
+                <h4 style="color:#3bb298;text-align:center;margin-bottom:2vw;">Comment Box </h4>
+                <div class="input-div">
+                    <input type="text" name="Comment[title]" placeholder="write you comments" required>
+                </div>
+                <div class="input-div">
+                    <input type="text" name="Comment[author]" placeholder="Name" required>
+                </div>
+                <button class="btn btn-success">Submit</button>
+            </div>    
+        </div>
+</form>
+<%- include ("../partials/footer.ejs") %>

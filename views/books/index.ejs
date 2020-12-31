@@ -1,5 +1,4 @@
-<%- include ("partials/header") %>
-
+<%- include ("../partials/header") %>
 <div class="container">
     <div class="jumbotron">
         <div style="display:flex;">
@@ -65,10 +64,10 @@
         <% books.forEach(function(book){ %>
         <div class="col-md-3 col-sm-6 col-xs-18">
             <div class="thumbnail">
-                <img src="<%=book.book_cover%>">
+                <img src="<%=book.bookcover%>">
                 <div class="caption">
-                    <h6><%= book.book_name %></h6>
-                    <p>by:<%= book.book_author %></p>
+                    <h6><%= book.bookname %></h6>
+                    <p>by:<%= book.bookauthor %></p>
                      <a href="/books/<%=book._id %>"><button class="btn btn-info">Open</button></a>
                     <button class="btn btn-primary">Download</button>
                 </div>
@@ -78,4 +77,4 @@
 
     </div>
 </div>
-<%- include ("partials/footer") %>
+<%- include ("../partials/footer") %>

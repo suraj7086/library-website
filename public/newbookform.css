@@ -1,3 +1,41 @@
 .book-form-container{
-    background:red;
+    margin-left:5%;
+    margin-right: 5%;
+    margin-top:5vw;
+    margin-bottom: 5vw;
+    display:flex;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgb(216, 214, 214,0.19);
+    height: 35vw;
+}
+.book-form-wrap{
+    width:60%;
+    padding-top:5vw;
+}
+.square-green{
+    width:40%;
+    background:#3bb298;
+    padding-top: 10vw;
+    padding-left:10%;
+}
+.input-div{
+    width:40%;
+    margin-bottom:1vw;
+    margin-left:30%;
+}
+/* .input-div label{
+    background:green;
+    width:80%;
+} */
+.input-div input{
+    background:rgb(235, 235, 234);
+    width:100%;
+    border:none;
+    height: 3vw;
+    border-radius:0.3vw;
+    padding-left:3%;
+}
+.book-form-wrap button{
+    margin-left:30%;
+    width:40%; 
+    background-color: #3bb298;
 }

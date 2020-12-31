@@ -1,0 +1,32 @@
+<%- include ("../partials/header.ejs") %>
+<form action="/books" method="POST">
+        <div class="book-form-container">
+            <div class="square-green">
+                <h2 style="color:white;">Welcome Back!</h2>
+                <p>
+                    Please add true details and unbroken file because this system is for you only.
+                </p>
+                <a class="btn btn-danger" href="/books">Go Back</a>
+            </div>
+            <div class="book-form-wrap">
+                <h4 style="color:#3bb298;text-align:center;margin-bottom:2vw;">Add New Book</h4>
+                <div class="input-div">
+                    <input type="text" name="bookname" placeholder="NCERT history" required>
+                </div>
+                <div class="input-div">
+                    <input type="text" name="bookauthor" placeholder="Forouzan" required>
+                </div>
+                <div class="input-div">
+                    <input type="text" name="bookdepartment" placeholder="CSE" required>
+                </div>
+                <div class="input-div">
+                    <label>
+                        Select a file: 
+                    </label>
+                    <input type="file" name="file" required>
+                </div>
+                <button class="btn btn-success">Submit</button>
+            </div>    
+        </div>
+</form>
+<%- include ("../partials/footer.ejs") %>
